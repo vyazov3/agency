@@ -1,0 +1,807 @@
+{
+	"info": {
+		"_postman_id": "f16c8782-bdd3-46cd-bbcc-63fabd2e721d",
+		"name": "Agency api",
+		"description": "---\n\n**КОДЫ ОШИБОК:**\n\n'404' - ресурс не найден\n\n'400' - некорректный запрос",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31044520"
+	},
+	"item": [
+		{
+			"name": "Trade",
+			"item": [
+				{
+					"name": "Get Trades for Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/clients/4/trades",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clients",
+								"4",
+								"trades"
+							]
+						},
+						"description": "Получение списка сделок конкретного клиента"
+					},
+					"response": [
+						{
+							"name": "Get Trades for Client",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/clients/4/trades",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"clients",
+										"4",
+										"trades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:02:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6InlzVC9ocVdUS0pTbmk1SHIvR05oU0E9PSIsInZhbHVlIjoiZ3E0WlFoMTRFb1lJV1grajltV1JUQXBlak5pMzYwZUsxenk0VkNNOTd4ZkNDcDdBVDZqd2tGTjFpQnRHa3YwQk4wcTZQa2hUQm1UVi9YbXAxbkx5Nkd0QWpCWVNVV2pHdWJGWlVDaTFkOHhmaDZ5SlFyL3hUVEpCcW5TNXhNWHEiLCJtYWMiOiJmNmNkYjE1NGZkNjRjODNhMWIwOWMyZTEwYWZkZTAzZmEwMTA4MTZlZDA1OTZkMDg1MzgwM2MzNDUzNzEwN2RiIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:02:24 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Ii80WmFYeHFvVURxRHNRRE1UQ3htY1E9PSIsInZhbHVlIjoib3ZucFJ4di9KenZMUGYyd253d3luSUNEb0tmMU01bmVBMFpWT1dFcUlOaWZvNHpsQy93ZVdQUXdFdGxsUGEvMFpKNnhCM1RQRTZlaU83TUFxS0xnMmVPWnYwbkRmd1Q0T2RPdDBaUlFGLzMxb1JWL2hQTWRIRml1dmJINHJvS2siLCJtYWMiOiJmODg1Zjg5MDcwYTMyZDIzMGMxNTJiNjdiYzg4ODgxYTMxYzg1YWIwMzYwNDA1YzA2MjM0NjVkNWIzZTI5YTZjIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:02:24 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 62,\n        \"status\": \"succ\",\n        \"date\": \"2014-02-25\",\n        \"total\": \"870872.24\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"client_id\": 4,\n            \"trade_id\": 62\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/trades",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"trades"
+							]
+						},
+						"description": "Получение списка сделок"
+					},
+					"response": [
+						{
+							"name": "Get Trades",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/trades",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"trades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:03:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6ImxYQjI0QlUvN2tXSmloc3AvTmMzWGc9PSIsInZhbHVlIjoia0EyblhFYUYxSkw2dGo2bGhRalVSUnEwUnlHRHBKVXB2aVBkaEk5elZ0ODBJYjJrcHBvOWlkOS9kOG43ejlZTUpxY1c3Rkh5THQ4SnRMdGNYbGxnZ0lqeTFRdDBrSW1LQlkxTlNXUFArczFLK3lXNzhpU3FrYkw0VHdGcmtIWkUiLCJtYWMiOiIxNTc3N2QyMTA2NGQ2M2RkNDM3NTc4ODlmMGVmODBjOGQxOWY2NGNlNDJjMjllNmQ5ZmFhNTExZWI3MTNjNGQ5IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:03:32 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Ik10WTZqTlc2RVFmaERsTDVwYnBWRlE9PSIsInZhbHVlIjoiTy9GVWgvKzUzazJTNGNrZXpnZjZqbzJJT1A1eWd6S20yM2lpdHRvb20vVHJOcXp5d0FTNWpWMVV6UVBRaWQxbWxXTlJkbHAyQlBYOHdubUNkRXBxamJnL0xWNEdvUHYxeXpUMng1K2tsa1p6RzBuSWVvNHo2MStldi92NWxnUUsiLCJtYWMiOiIyYmNkNWQ0Y2M1MGUyNjI3ZmFhMTkwMWU5MDgyYjg4ZWY4ZjRiOGU3Y2NlNmEyMzE2ZGM3OGZmNDUzMzI5NmE3IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:03:32 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 102,\n        \"status\": \"fail\",\n        \"date\": \"2024-01-08\",\n        \"total\": \"31231221.00\",\n        \"created_at\": \"2024-01-08T11:27:13.000000Z\"\n    },\n    {\n        \"id\": 101,\n        \"status\": \"fail\",\n        \"date\": \"2024-01-08\",\n        \"total\": \"312312.00\",\n        \"created_at\": \"2024-01-08T11:26:10.000000Z\"\n    },\n    {\n        \"id\": 100,\n        \"status\": \"succ\",\n        \"date\": \"2009-11-21\",\n        \"total\": \"409440.68\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 99,\n        \"status\": \"succ\",\n        \"date\": \"2022-09-22\",\n        \"total\": \"276586.17\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 98,\n        \"status\": \"fail\",\n        \"date\": \"2021-10-15\",\n        \"total\": \"786600.54\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 97,\n        \"status\": \"succ\",\n        \"date\": \"2002-02-09\",\n        \"total\": \"202125.96\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 96,\n        \"status\": \"fail\",\n        \"date\": \"1994-12-08\",\n        \"total\": \"46750.07\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 95,\n        \"status\": \"fail\",\n        \"date\": \"1999-08-21\",\n        \"total\": \"344433.86\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 94,\n        \"status\": \"fail\",\n        \"date\": \"1998-06-02\",\n        \"total\": \"112640.28\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 93,\n        \"status\": \"succ\",\n        \"date\": \"1982-10-28\",\n        \"total\": \"181663.52\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 92,\n        \"status\": \"succ\",\n        \"date\": \"1998-03-08\",\n        \"total\": \"904747.15\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 91,\n        \"status\": \"fail\",\n        \"date\": \"2006-07-21\",\n        \"total\": \"403866.52\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 90,\n        \"status\": \"fail\",\n        \"date\": \"1982-11-16\",\n        \"total\": \"390180.01\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 89,\n        \"status\": \"fail\",\n        \"date\": \"1973-11-28\",\n        \"total\": \"336040.18\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 88,\n        \"status\": \"succ\",\n        \"date\": \"2005-09-15\",\n        \"total\": \"763351.07\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 87,\n        \"status\": \"succ\",\n        \"date\": \"1996-09-03\",\n        \"total\": \"636629.93\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 86,\n        \"status\": \"fail\",\n        \"date\": \"2020-06-04\",\n        \"total\": \"223101.51\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 85,\n        \"status\": \"succ\",\n        \"date\": \"2007-09-30\",\n        \"total\": \"374253.08\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 84,\n        \"status\": \"fail\",\n        \"date\": \"1977-09-15\",\n        \"total\": \"987865.86\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 83,\n        \"status\": \"fail\",\n        \"date\": \"1981-12-22\",\n        \"total\": \"62207.29\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 82,\n        \"status\": \"succ\",\n        \"date\": \"1987-04-26\",\n        \"total\": \"965218.38\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 81,\n        \"status\": \"succ\",\n        \"date\": \"2020-05-16\",\n        \"total\": \"423247.98\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 80,\n        \"status\": \"succ\",\n        \"date\": \"1990-12-02\",\n        \"total\": \"675203.62\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 79,\n        \"status\": \"fail\",\n        \"date\": \"1982-04-09\",\n        \"total\": \"323038.78\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 78,\n        \"status\": \"succ\",\n        \"date\": \"2016-09-03\",\n        \"total\": \"218119.90\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 77,\n        \"status\": \"succ\",\n        \"date\": \"2017-04-09\",\n        \"total\": \"12056.19\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 76,\n        \"status\": \"fail\",\n        \"date\": \"1992-01-20\",\n        \"total\": \"826272.12\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 75,\n        \"status\": \"fail\",\n        \"date\": \"1998-04-07\",\n        \"total\": \"743869.98\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 74,\n        \"status\": \"succ\",\n        \"date\": \"1985-04-10\",\n        \"total\": \"27462.45\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 73,\n        \"status\": \"succ\",\n        \"date\": \"1980-10-23\",\n        \"total\": \"114897.60\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 72,\n        \"status\": \"succ\",\n        \"date\": \"1986-12-05\",\n        \"total\": \"450885.40\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 71,\n        \"status\": \"succ\",\n        \"date\": \"1996-07-19\",\n        \"total\": \"377191.06\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 70,\n        \"status\": \"fail\",\n        \"date\": \"1994-10-13\",\n        \"total\": \"642972.01\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 69,\n        \"status\": \"succ\",\n        \"date\": \"2023-12-21\",\n        \"total\": \"717410.39\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 68,\n        \"status\": \"succ\",\n        \"date\": \"2003-09-06\",\n        \"total\": \"567609.91\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 67,\n        \"status\": \"fail\",\n        \"date\": \"1996-05-11\",\n        \"total\": \"303466.42\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 66,\n        \"status\": \"fail\",\n        \"date\": \"2006-04-30\",\n        \"total\": \"966095.44\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 65,\n        \"status\": \"succ\",\n        \"date\": \"1995-05-12\",\n        \"total\": \"468987.94\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 64,\n        \"status\": \"fail\",\n        \"date\": \"1980-05-04\",\n        \"total\": \"466047.89\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 63,\n        \"status\": \"succ\",\n        \"date\": \"1994-10-01\",\n        \"total\": \"93695.03\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 62,\n        \"status\": \"succ\",\n        \"date\": \"2014-02-25\",\n        \"total\": \"870872.24\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 61,\n        \"status\": \"fail\",\n        \"date\": \"1986-05-25\",\n        \"total\": \"282968.08\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 60,\n        \"status\": \"succ\",\n        \"date\": \"2002-08-16\",\n        \"total\": \"381152.14\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 59,\n        \"status\": \"succ\",\n        \"date\": \"1983-08-09\",\n        \"total\": \"442955.95\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 58,\n        \"status\": \"fail\",\n        \"date\": \"1993-06-08\",\n        \"total\": \"780082.08\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 57,\n        \"status\": \"succ\",\n        \"date\": \"2013-01-25\",\n        \"total\": \"820441.52\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 56,\n        \"status\": \"fail\",\n        \"date\": \"2010-06-08\",\n        \"total\": \"990501.97\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 55,\n        \"status\": \"fail\",\n        \"date\": \"1999-05-08\",\n        \"total\": \"817224.57\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 54,\n        \"status\": \"succ\",\n        \"date\": \"2013-08-10\",\n        \"total\": \"838235.27\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 53,\n        \"status\": \"succ\",\n        \"date\": \"2015-04-27\",\n        \"total\": \"559161.11\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 52,\n        \"status\": \"fail\",\n        \"date\": \"1982-04-18\",\n        \"total\": \"286061.55\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 51,\n        \"status\": \"fail\",\n        \"date\": \"1970-06-25\",\n        \"total\": \"207156.33\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 50,\n        \"status\": \"succ\",\n        \"date\": \"2023-12-24\",\n        \"total\": \"67662.36\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 49,\n        \"status\": \"succ\",\n        \"date\": \"1992-02-03\",\n        \"total\": \"521279.16\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 48,\n        \"status\": \"succ\",\n        \"date\": \"2019-03-02\",\n        \"total\": \"533384.16\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 47,\n        \"status\": \"fail\",\n        \"date\": \"2019-10-18\",\n        \"total\": \"968962.98\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 46,\n        \"status\": \"succ\",\n        \"date\": \"1994-12-13\",\n        \"total\": \"46780.36\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 45,\n        \"status\": \"fail\",\n        \"date\": \"2018-09-02\",\n        \"total\": \"926723.19\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 44,\n        \"status\": \"fail\",\n        \"date\": \"1996-05-28\",\n        \"total\": \"229563.65\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 43,\n        \"status\": \"fail\",\n        \"date\": \"1971-07-18\",\n        \"total\": \"363455.38\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 42,\n        \"status\": \"fail\",\n        \"date\": \"1970-05-10\",\n        \"total\": \"492779.65\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 41,\n        \"status\": \"fail\",\n        \"date\": \"1974-03-27\",\n        \"total\": \"785027.35\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 40,\n        \"status\": \"fail\",\n        \"date\": \"2020-06-15\",\n        \"total\": \"380283.93\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 39,\n        \"status\": \"fail\",\n        \"date\": \"1988-04-04\",\n        \"total\": \"618284.39\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 38,\n        \"status\": \"succ\",\n        \"date\": \"1971-10-23\",\n        \"total\": \"249058.70\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 37,\n        \"status\": \"fail\",\n        \"date\": \"1994-05-23\",\n        \"total\": \"153938.42\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 36,\n        \"status\": \"fail\",\n        \"date\": \"2011-02-14\",\n        \"total\": \"933161.03\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 35,\n        \"status\": \"fail\",\n        \"date\": \"2006-01-26\",\n        \"total\": \"854769.91\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 34,\n        \"status\": \"fail\",\n        \"date\": \"1997-07-09\",\n        \"total\": \"324706.69\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 33,\n        \"status\": \"succ\",\n        \"date\": \"1982-01-03\",\n        \"total\": \"367395.97\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 32,\n        \"status\": \"fail\",\n        \"date\": \"1976-01-01\",\n        \"total\": \"490197.60\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 31,\n        \"status\": \"succ\",\n        \"date\": \"2023-04-28\",\n        \"total\": \"879051.17\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 30,\n        \"status\": \"fail\",\n        \"date\": \"1974-01-09\",\n        \"total\": \"685948.89\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 29,\n        \"status\": \"fail\",\n        \"date\": \"1986-02-07\",\n        \"total\": \"578467.47\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 28,\n        \"status\": \"succ\",\n        \"date\": \"2008-11-25\",\n        \"total\": \"472978.86\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 27,\n        \"status\": \"succ\",\n        \"date\": \"1996-12-30\",\n        \"total\": \"278443.04\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 26,\n        \"status\": \"fail\",\n        \"date\": \"1998-12-22\",\n        \"total\": \"757047.36\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 25,\n        \"status\": \"succ\",\n        \"date\": \"2020-04-24\",\n        \"total\": \"851632.55\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 24,\n        \"status\": \"succ\",\n        \"date\": \"1977-06-24\",\n        \"total\": \"593590.60\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 23,\n        \"status\": \"fail\",\n        \"date\": \"2003-03-03\",\n        \"total\": \"366453.32\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 22,\n        \"status\": \"succ\",\n        \"date\": \"2014-04-11\",\n        \"total\": \"379480.18\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 21,\n        \"status\": \"fail\",\n        \"date\": \"1986-02-19\",\n        \"total\": \"753134.99\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 20,\n        \"status\": \"fail\",\n        \"date\": \"1971-04-11\",\n        \"total\": \"300237.49\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 19,\n        \"status\": \"fail\",\n        \"date\": \"1999-05-14\",\n        \"total\": \"426847.22\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 18,\n        \"status\": \"succ\",\n        \"date\": \"1984-05-22\",\n        \"total\": \"940986.73\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 17,\n        \"status\": \"succ\",\n        \"date\": \"1983-09-29\",\n        \"total\": \"316825.14\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 16,\n        \"status\": \"fail\",\n        \"date\": \"2016-05-11\",\n        \"total\": \"582581.96\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 15,\n        \"status\": \"succ\",\n        \"date\": \"2011-12-29\",\n        \"total\": \"175543.04\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 14,\n        \"status\": \"succ\",\n        \"date\": \"1980-11-24\",\n        \"total\": \"171744.19\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 13,\n        \"status\": \"fail\",\n        \"date\": \"2000-03-30\",\n        \"total\": \"918114.85\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 12,\n        \"status\": \"fail\",\n        \"date\": \"1984-06-13\",\n        \"total\": \"231649.54\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 11,\n        \"status\": \"fail\",\n        \"date\": \"2016-12-28\",\n        \"total\": \"176790.78\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 10,\n        \"status\": \"succ\",\n        \"date\": \"1972-10-13\",\n        \"total\": \"939367.85\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 9,\n        \"status\": \"succ\",\n        \"date\": \"1991-05-16\",\n        \"total\": \"698241.24\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 8,\n        \"status\": \"succ\",\n        \"date\": \"2018-03-30\",\n        \"total\": \"806360.83\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 7,\n        \"status\": \"succ\",\n        \"date\": \"2005-06-02\",\n        \"total\": \"88905.49\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 6,\n        \"status\": \"succ\",\n        \"date\": \"1978-11-23\",\n        \"total\": \"130176.80\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 5,\n        \"status\": \"succ\",\n        \"date\": \"1986-01-22\",\n        \"total\": \"634412.25\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"status\": \"fail\",\n        \"date\": \"1995-03-24\",\n        \"total\": \"237059.97\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"status\": \"fail\",\n        \"date\": \"1992-03-12\",\n        \"total\": \"139805.61\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"status\": \"succ\",\n        \"date\": \"2023-02-13\",\n        \"total\": \"919197.26\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    {\n        \"id\": 1,\n        \"status\": \"fail\",\n        \"date\": \"2012-02-20\",\n        \"total\": \"596057.33\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Trades for Estate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/estates/1/trades",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"estates",
+								"1",
+								"trades"
+							]
+						},
+						"description": "Получение сделок конкретного объекта недвижимости"
+					},
+					"response": [
+						{
+							"name": "Get Trades for Estate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/estates/1/trades",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"estates",
+										"1",
+										"trades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:03:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IlI2elVHKzhocEFQVDZ6bXVuamVKc1E9PSIsInZhbHVlIjoiVlN5bDBqbG51SWtBU3NTNU42N25EZ0NNSENtaFY4dVFLa2NXK0E3SG5yaTc0cFpSU3FDN0Q3US9DQlZtV2xjOEVOUlZCemlmZXF6SlhabkNhbGtTS3FVODRubGdPQXVUYm1jRnV5MVJheEZwRkZjcjdwdTNHbU5kODdheGRNTVYiLCJtYWMiOiJiNDk4ZGM5MWRmNzE0YTI1MTc3YmI4ZTUxMTljOGYwMzY5MGFhZGQ0NmRhMmNlN2NhNDQ3YTNlZjRhOGE0NTAwIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:03:42 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Im1jVWFPUk9nQ0pLaGpIOGNjbkRmQVE9PSIsInZhbHVlIjoiN2VNZHQ5OFRyWDVFTGxka1JtOHFKRDJMTkNqb2E4eUllMlZyMlE2RXJwSXFQTDUrSndkVnZYZ1lpZCtXUHkxa0xFZU1Ra01QNHFQbUQyeklZcEVxL09EdXNuTnNxb2V0OUgzdFdWMVlveklFR2xIYzVabTI5VitOdTl1b3loMVYiLCJtYWMiOiI3YzcyZmU2ZmExZGU3MTdhZGU2NjUwNjNkMjViNjNlODFhZTQ3YzIzZjg0MTlmNzUwNGEwODVjNTEzYzY0ZTMxIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:03:42 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 77,\n        \"status\": \"succ\",\n        \"date\": \"2017-04-09\",\n        \"total\": \"12056.19\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 77\n        }\n    },\n    {\n        \"id\": 58,\n        \"status\": \"fail\",\n        \"date\": \"1993-06-08\",\n        \"total\": \"780082.08\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 58\n        }\n    },\n    {\n        \"id\": 83,\n        \"status\": \"fail\",\n        \"date\": \"1981-12-22\",\n        \"total\": \"62207.29\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 83\n        }\n    },\n    {\n        \"id\": 100,\n        \"status\": \"succ\",\n        \"date\": \"2009-11-21\",\n        \"total\": \"409440.68\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 100\n        }\n    },\n    {\n        \"id\": 1,\n        \"status\": \"fail\",\n        \"date\": \"2012-02-20\",\n        \"total\": \"596057.33\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 1\n        }\n    },\n    {\n        \"id\": 1,\n        \"status\": \"fail\",\n        \"date\": \"2012-02-20\",\n        \"total\": \"596057.33\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 1\n        }\n    },\n    {\n        \"id\": 1,\n        \"status\": \"fail\",\n        \"date\": \"2012-02-20\",\n        \"total\": \"596057.33\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 1\n        }\n    },\n    {\n        \"id\": 1,\n        \"status\": \"fail\",\n        \"date\": \"2012-02-20\",\n        \"total\": \"596057.33\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"pivot\": {\n            \"estate_id\": 1,\n            \"trade_id\": 1\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Clients, Estates, Trade for Trade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/trades/4/clients/estates",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"trades",
+								"4",
+								"clients",
+								"estates"
+							]
+						},
+						"description": "Получение информации о клиентах, объектах сделки и самой сделки"
+					},
+					"response": [
+						{
+							"name": "get Clients, Estates, Trade for Trade",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/trades/4/clients/estates",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"trades",
+										"4",
+										"clients",
+										"estates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:05:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IldvYkNHMTU1SEhvaE5FNDZESTVpMlE9PSIsInZhbHVlIjoidjNLSDk0b3o0ZEZ2bWFUbE4ydFNSNlgwZGMydTgyNnltV3pPTldianBhUS9xUmhUZEZkS3dBQ0kxSlRFa3RJTkFCYTdsRHZQYm5vU0lsN2tSZ0NvdVAyVlhiSmNjNi9ZM1QxN1BGSGg5MVVLRTBYK1pZdWVqOWIvMFA2cW45MHMiLCJtYWMiOiIyYzRlZDMyMzVkMGJlNGZiOGY0NjdmNjFjNGMyZTVhNTdkN2NhMjJlMmEwNjI2OTMyYTJkYjk3NzI5ZGJhODRmIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:17 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImVNWDc0S056R0ViN0VmekxMSFNXTnc9PSIsInZhbHVlIjoiN0JBKzlHbHQyVUp0azVRWGdaZlJGT1FGNVlYcXV5eDI5ZmNvdHFaVG9HY3Z1ODFZYjJBTEltZWlSdmx0Mk1rZUJNT0pvQ1puc3ZTUlorQkk4NU9GVUpJVzcyU09OZGNzVVlMWXpMNzVCUm42REk1aVVWYmNuTXl4RjhNTit6dHciLCJtYWMiOiIxMWIxNDRjN2RlNmZhNDAxZGFmMTJjMjgwNTUyOTU0ZTc1ZjczYWI3YjE2NWI4NjNjMDM3OGIxNGU1ZTMyOTA3IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:17 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clients\": [\n        {\n            \"id\": 13,\n            \"first_name\": \"Alene\",\n            \"last_name\": \"Reynolds\",\n            \"middle_name\": null,\n            \"organization_name\": null,\n            \"series_pass\": null,\n            \"number_pass\": null,\n            \"address\": null,\n            \"phone\": null,\n            \"category_id\": 2,\n            \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n            \"deleted_at\": null,\n            \"pivot\": {\n                \"trade_id\": 4,\n                \"client_id\": 13,\n                \"role_id\": 1,\n                \"estate_id\": 10\n            },\n            \"category\": {\n                \"id\": 2,\n                \"title\": \"Юридическое лицо\",\n                \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n                \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n            }\n        }\n    ],\n    \"estates\": [\n        {\n            \"id\": 10,\n            \"description\": \"Sequi natus pariatur at ut necessitatibus distinctio omnis ut.\",\n            \"address\": \"209 Lynch Hill Suite 062\\nHowellstad, FL 65837\",\n            \"area\": \"88.50\",\n            \"count_room\": 1,\n            \"is_sell\": 1,\n            \"price\": \"133690.27\",\n            \"type_id\": 2,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n            \"pivot\": {\n                \"trade_id\": 4,\n                \"estate_id\": 10\n            },\n            \"type\": {\n                \"id\": 2,\n                \"title\": \"Земля\",\n                \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n                \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n            }\n        }\n    ],\n    \"trade\": {\n        \"id\": 4,\n        \"status\": \"fail\",\n        \"date\": \"1995-03-24\",\n        \"total\": \"237059.97\",\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\"\n    },\n    \"roles\": [\n        {\n            \"id\": 1,\n            \"title\": \"Продавец\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"pivot\": {\n                \"trade_id\": 4,\n                \"role_id\": 1\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Post Trade-Client-Estate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client_id\": \"1\",\r\n    \"role_id\": \"1\",\r\n    \"estate_id\": \"1\",\r\n    \"trade_id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/trades/clients-estates/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"trades",
+								"clients-estates",
+								"store"
+							]
+						},
+						"description": "Сохранение **дополнительной** информации о сделке в базе.\n\n**Обязательные** параметры:\n\n'client_id' : идентификатор пользователя  \n'role_id' : роль клиента в сделке\n\n'estate_id' : идентификатор объекта, по которому производится сделка\n\n'trade_id' : идентификатор сделки\n\n---\n\nПример ответа на запрос, где введена некорректная информация о каком-либо параметре:\n\nStartFragment\n\n{\n\n\"error\": \"bad request\",\n\n\"0\": 400\n\n}\n\nEndFragment\n\n---\n\n**Роли** пользователей в сделке:\n\n'role_id': '1' - Продавец\n\n'role_id': '2' - Покупатель"
+					},
+					"response": [
+						{
+							"name": "Post Trade-Client-Estate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"client_id\": \"1\",\r\n    \"role_id\": \"1\",\r\n    \"estate_id\": \"1\",\r\n    \"trade_id\": \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/trades/clients-estates/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"trades",
+										"clients-estates",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:05:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6ImwxSlpud1VVdHNsR0hqQXRMU3ZWakE9PSIsInZhbHVlIjoiWDZiSWdYU3pwTytkbldoaG04SlFUMFNmazFXMDFPRDVHMjBDMDZNenE2d3huWFNwTEh5QXUzWnJpdlhxRkhaK0FIZTBsVHJZempGQUZ6NHo1NnVlL3gvN0RWZ3A0QzZCS1FCcVdnSWVNd1pWc0xZenRzSnJkL3hxNUFrTDRWNjEiLCJtYWMiOiI0YmVhYmNhOWE5NzBiNWM3MzUxYjk0ZjA5Y2EwNjBiYmY1OGQ1OTk5YTQxM2Y3YjgwN2Y5ZmQ3NzZhMWJkOWJiIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:27 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Imk3d1oybk54TUhkbUpQYUNyam1vZ1E9PSIsInZhbHVlIjoiNTBBVzBqQkRaQ3c0MzVSTWFVL1dhYUZpaUlOTm5DdFJ6aTRFZGs1SHZ5b2JXdzRvWWVrLzAyMzQ1V2dwZk9PVkNONTJoV1A5UHNRQ2V4dXRmaGZENmdwSTFud1FHZllONmVXcE53b05JRlJ0R2JTU1gvc2R2VnlaUHNxNituQnAiLCJtYWMiOiJhNjhlOWNjMjU0YjM5ZDJkNjAxNjVkMTY2ZTlhYmFlNjQ0M2MyMTc2OWFlZDE3OWQ2MTJjMDlhYTg3MzM2YTg0IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:27 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"trade_id\": \"1\",\n    \"estate_id\": \"1\",\n    \"client_id\": \"1\",\n    \"role_id\": \"1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Post Trade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024.08.01\",\r\n    \"total\": \"3132213\",\r\n    \"status\": \"fail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/trades/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"trades",
+								"store"
+							]
+						},
+						"description": "Сохранение сделки в базе.\n\n**Обязательные** параметры:\n\n'date' : 'Y.M.D' - дата заключения сделки\n\n'total' : '123' - сумма сделки (int)\n\n'status': 'succ' - статус сделки (string)"
+					},
+					"response": [
+						{
+							"name": "Post Trade",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date\": \"2024.08.01\",\r\n    \"total\": \"3132213\",\r\n    \"status\": \"fail\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/trades/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"trades",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:05:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6InF0TnVxZmZNWlB3UHJ4QW85TE43WVE9PSIsInZhbHVlIjoiT1ZtR0xxL05GaUhVcE5EV2ZFR1RFRmVkRUZNN3pjaXA2NTFnZmdxb1I3M2liSUVjL0plbHU1NU96eDBBY3NWSkltZ2ZDT1p3azE5MUV0U0xDazJnSGl5ckJxNG5rekVkVFIvcGRUeGtTbnVNZFkvN0plczNnelBXdi95cllmb2QiLCJtYWMiOiJmYTdjY2FkNTM1NzllNDU4NTcyZjQyNzVjYzI4NDMyZDNjMTk5MTdiY2MyM2U3NjM0MDQzY2I5YmM4MDZmM2ZhIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:36 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IndRM3p1WjZQUkZMZ2xJYWkyWERuSVE9PSIsInZhbHVlIjoibDBPcXZBTEo4YzRJajBQWGJEaUJ3bEVSdis5Rk9GV0tUSDhRZVV2bkMyeDUzTGc5dGdnd0JQQ2lrNUlOMVR1aFBRVUFNZHNLYXBwOFI1dzVsV1VUeXVMOG5WQkNRREI1dGtlL1EySGxGSU9PMERMSlNZUzBnTlVzcWc0SFNEbkkiLCJtYWMiOiIzZmM4NmRhN2U3NjIzMWUwNDA5YmM3YTQ2MGQ5ODc3YWNlNjA2MDRhN2VmNDBhOTQ3MGUwMjAyNDAwMTc1ZTYxIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:36 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": \"3132213\",\n    \"date\": \"2024.08.01\",\n    \"status\": \"fail\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Взаимодействие со сделками."
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Get Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/clients",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clients"
+							]
+						},
+						"description": "Получение списка пользователей, **не удаливших** свой аккаунт"
+					},
+					"response": [
+						{
+							"name": "Get Clients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/clients",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:05:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6ImZiNWpRVzQxbHhva1pRd1ZwSzNocGc9PSIsInZhbHVlIjoiTHJLUTZRMTgwaWR4SVFJbDJJZTZpSUNzZ290WmIrODBIazJCQ2JSSkRVcVpkaGNhRVQvUGVVdkd6WVNHRmp6eFM2TWNaNU1TeG9JdFEyS3NjWHBuUENLc0taLzkxdEF6Q3prSEt3OTBkM0N1NnFHRXdtRnBmU0tzQTdJcytYckYiLCJtYWMiOiI3NGQ1ZDY2YjMyNjZhOWVjNDgwZmE3M2EyYjAxMGRkNjI0NGM3ZmEwYTUxNTY0ZTNkMDQ5YTBlNTljYWZmYjU4IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:51 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InZCaHNrS3pybG1yN1M0QWxnUjk4clE9PSIsInZhbHVlIjoiUjlnQ0lwQU1zTWNqanp3bWpuUHpFYktWTmxjN0xrMnA1cVEvbnh4SkpWMzZlclNIUUI0bGVRazlmODRKbnJJdlhWV3BsbWRpV0ZEaGhLNU5QN1luazBKRXVwdlpDbHdtWElBU1J2MUozVy90dUx1TUhKMzlvK3VWNTRyQWFPWkUiLCJtYWMiOiJlNmY1M2ZhZmNkNzcwNTdhOGVhMmY1ZGU3M2FhZmJiYzg0MDMyZjAxNzkzZTdlMDE3YzJmM2I3YTMzMTAyNjA3IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:51 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 101,\n        \"first_name\": \"gggg1\",\n        \"last_name\": \"gggg1\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": \"4411\",\n        \"number_pass\": \"441112\",\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:40:27.000000Z\",\n        \"updated_at\": \"2024-01-08T10:40:27.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 100,\n        \"first_name\": \"Emerald\",\n        \"last_name\": \"Leffler\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 99,\n        \"first_name\": \"Carson\",\n        \"last_name\": \"Kris\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 98,\n        \"first_name\": \"Julia\",\n        \"last_name\": \"Wisozk\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 97,\n        \"first_name\": \"Forest\",\n        \"last_name\": \"Bogan\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 96,\n        \"first_name\": \"Dorothy\",\n        \"last_name\": \"Torp\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 95,\n        \"first_name\": \"Dawn\",\n        \"last_name\": \"Walker\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 94,\n        \"first_name\": \"Katrine\",\n        \"last_name\": \"Kirlin\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 93,\n        \"first_name\": \"Graciela\",\n        \"last_name\": \"Jones\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 92,\n        \"first_name\": \"Foster\",\n        \"last_name\": \"Quigley\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 91,\n        \"first_name\": \"Annamae\",\n        \"last_name\": \"Daugherty\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 90,\n        \"first_name\": \"Zoey\",\n        \"last_name\": \"Kling\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 89,\n        \"first_name\": \"Salvador\",\n        \"last_name\": \"Russel\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 88,\n        \"first_name\": \"Korbin\",\n        \"last_name\": \"Jast\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 87,\n        \"first_name\": \"Donavon\",\n        \"last_name\": \"Wolff\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 86,\n        \"first_name\": \"Kaya\",\n        \"last_name\": \"Wiza\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 85,\n        \"first_name\": \"Elissa\",\n        \"last_name\": \"McClure\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 84,\n        \"first_name\": \"Brenna\",\n        \"last_name\": \"Orn\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 83,\n        \"first_name\": \"Filomena\",\n        \"last_name\": \"Ortiz\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 82,\n        \"first_name\": \"Krista\",\n        \"last_name\": \"Schimmel\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 81,\n        \"first_name\": \"Dangelo\",\n        \"last_name\": \"Boyle\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 80,\n        \"first_name\": \"Brionna\",\n        \"last_name\": \"O'Connell\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 79,\n        \"first_name\": \"Jacinthe\",\n        \"last_name\": \"Huels\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 78,\n        \"first_name\": \"Zora\",\n        \"last_name\": \"Von\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 77,\n        \"first_name\": \"Zackery\",\n        \"last_name\": \"Friesen\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 76,\n        \"first_name\": \"Stone\",\n        \"last_name\": \"Jones\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 75,\n        \"first_name\": \"Adrienne\",\n        \"last_name\": \"Gorczany\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 74,\n        \"first_name\": \"Lloyd\",\n        \"last_name\": \"Farrell\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 73,\n        \"first_name\": \"Zita\",\n        \"last_name\": \"Ledner\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 72,\n        \"first_name\": \"Jimmy\",\n        \"last_name\": \"Gleason\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 71,\n        \"first_name\": \"Irma\",\n        \"last_name\": \"Cremin\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 70,\n        \"first_name\": \"Emelie\",\n        \"last_name\": \"Roob\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 69,\n        \"first_name\": \"Gianni\",\n        \"last_name\": \"Price\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 68,\n        \"first_name\": \"Kiara\",\n        \"last_name\": \"Reichert\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 67,\n        \"first_name\": \"Ava\",\n        \"last_name\": \"Predovic\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 66,\n        \"first_name\": \"Dannie\",\n        \"last_name\": \"Becker\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 65,\n        \"first_name\": \"Alysa\",\n        \"last_name\": \"Baumbach\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 64,\n        \"first_name\": \"Sheridan\",\n        \"last_name\": \"Gibson\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 63,\n        \"first_name\": \"Frida\",\n        \"last_name\": \"Harris\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 62,\n        \"first_name\": \"Kathryn\",\n        \"last_name\": \"Jacobi\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 61,\n        \"first_name\": \"Thad\",\n        \"last_name\": \"Lemke\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 60,\n        \"first_name\": \"Norwood\",\n        \"last_name\": \"Ortiz\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 59,\n        \"first_name\": \"Anastacio\",\n        \"last_name\": \"Wolff\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 58,\n        \"first_name\": \"Lorenz\",\n        \"last_name\": \"Franecki\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 57,\n        \"first_name\": \"Destany\",\n        \"last_name\": \"Reinger\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 56,\n        \"first_name\": \"Kristin\",\n        \"last_name\": \"Powlowski\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 55,\n        \"first_name\": \"Ora\",\n        \"last_name\": \"Medhurst\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 54,\n        \"first_name\": \"Werner\",\n        \"last_name\": \"Jaskolski\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 53,\n        \"first_name\": \"Minerva\",\n        \"last_name\": \"Skiles\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 52,\n        \"first_name\": \"Roxane\",\n        \"last_name\": \"Hermann\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 51,\n        \"first_name\": \"Nikki\",\n        \"last_name\": \"Dooley\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 50,\n        \"first_name\": \"Dorthy\",\n        \"last_name\": \"Leannon\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 49,\n        \"first_name\": \"Josefina\",\n        \"last_name\": \"Littel\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 48,\n        \"first_name\": \"Leif\",\n        \"last_name\": \"Kunde\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 47,\n        \"first_name\": \"Genoveva\",\n        \"last_name\": \"Mayert\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 46,\n        \"first_name\": \"Arjun\",\n        \"last_name\": \"Sawayn\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 45,\n        \"first_name\": \"Victoria\",\n        \"last_name\": \"Kshlerin\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 44,\n        \"first_name\": \"Brandt\",\n        \"last_name\": \"Kuhn\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 43,\n        \"first_name\": \"Carley\",\n        \"last_name\": \"Skiles\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 42,\n        \"first_name\": \"Jamal\",\n        \"last_name\": \"McGlynn\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 41,\n        \"first_name\": \"Alda\",\n        \"last_name\": \"Lowe\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 40,\n        \"first_name\": \"Stephen\",\n        \"last_name\": \"Hodkiewicz\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 39,\n        \"first_name\": \"Owen\",\n        \"last_name\": \"Larson\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 38,\n        \"first_name\": \"Oren\",\n        \"last_name\": \"Farrell\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 37,\n        \"first_name\": \"Clemens\",\n        \"last_name\": \"Feil\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 36,\n        \"first_name\": \"Meta\",\n        \"last_name\": \"Cormier\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 35,\n        \"first_name\": \"Moshe\",\n        \"last_name\": \"Padberg\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 34,\n        \"first_name\": \"Tyshawn\",\n        \"last_name\": \"Gottlieb\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 33,\n        \"first_name\": \"Nels\",\n        \"last_name\": \"Buckridge\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 32,\n        \"first_name\": \"Keagan\",\n        \"last_name\": \"Trantow\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 31,\n        \"first_name\": \"Janessa\",\n        \"last_name\": \"Shanahan\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 30,\n        \"first_name\": \"Dakota\",\n        \"last_name\": \"Donnelly\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 29,\n        \"first_name\": \"Kelvin\",\n        \"last_name\": \"Zulauf\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 28,\n        \"first_name\": \"Mauricio\",\n        \"last_name\": \"Paucek\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 27,\n        \"first_name\": \"Wade\",\n        \"last_name\": \"Tromp\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 26,\n        \"first_name\": \"Lauren\",\n        \"last_name\": \"Hane\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 25,\n        \"first_name\": \"Myrtle\",\n        \"last_name\": \"Koch\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 24,\n        \"first_name\": \"Reyes\",\n        \"last_name\": \"Von\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 23,\n        \"first_name\": \"Tara\",\n        \"last_name\": \"Willms\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 22,\n        \"first_name\": \"Sydnee\",\n        \"last_name\": \"Fadel\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 21,\n        \"first_name\": \"Jesus\",\n        \"last_name\": \"Spinka\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 20,\n        \"first_name\": \"Kenny\",\n        \"last_name\": \"Prosacco\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 19,\n        \"first_name\": \"Craig\",\n        \"last_name\": \"Bode\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 18,\n        \"first_name\": \"Ericka\",\n        \"last_name\": \"Murphy\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 17,\n        \"first_name\": \"Johann\",\n        \"last_name\": \"Powlowski\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 16,\n        \"first_name\": \"Kirk\",\n        \"last_name\": \"Turcotte\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 15,\n        \"first_name\": \"Devin\",\n        \"last_name\": \"Hilpert\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 14,\n        \"first_name\": \"Urban\",\n        \"last_name\": \"Kub\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 13,\n        \"first_name\": \"Alene\",\n        \"last_name\": \"Reynolds\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 12,\n        \"first_name\": \"Oda\",\n        \"last_name\": \"Hoeger\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 11,\n        \"first_name\": \"Kennedy\",\n        \"last_name\": \"Jacobs\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 10,\n        \"first_name\": \"Marian\",\n        \"last_name\": \"Cummings\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 9,\n        \"first_name\": \"Keyshawn\",\n        \"last_name\": \"Mueller\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 8,\n        \"first_name\": \"Wayne\",\n        \"last_name\": \"Abshire\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 7,\n        \"first_name\": \"Micah\",\n        \"last_name\": \"McGlynn\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 6,\n        \"first_name\": \"Kianna\",\n        \"last_name\": \"Koepp\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"first_name\": \"Ericka\",\n        \"last_name\": \"Veum\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 4,\n        \"first_name\": \"Kay\",\n        \"last_name\": \"Murray\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"first_name\": \"Ayla\",\n        \"last_name\": \"Runolfsson\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"first_name\": \"Annabell\",\n        \"last_name\": \"Ortiz\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 2,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 2,\n            \"title\": \"Юридическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"first_name\": \"Rosamond\",\n        \"last_name\": \"Hermann\",\n        \"middle_name\": null,\n        \"organization_name\": null,\n        \"series_pass\": null,\n        \"number_pass\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"category_id\": 1,\n        \"created_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"updated_at\": \"2024-01-08T10:38:20.000000Z\",\n        \"deleted_at\": null,\n        \"category\": {\n            \"id\": 1,\n            \"title\": \"Физическое лицо\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"gggg1\",\r\n    \"last_name\": \"gggg1\",\r\n    \"category_id\": \"1\",\r\n    \"series_pass\": \"4411\",\r\n    \"number_pass\": \"441112\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/clients/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clients",
+								"store"
+							]
+						},
+						"description": "Сохранение пользователя в базе.\n\n**Обязательные** параметры:\n\nfirst_name, last_name, category_id\n\n**Опциональные** параметры:\n\n'middle_name - string'\n\n'phone - string'\n\n'organization_name - string'\n\n'series_pass - string'\n\n'number_pass - string'\n\n'address - string'\n\n**Категории** пользователей:\n\n'category_id' : '1' - физическое лицо\n\n'category_id' : '2' - юридическое лицо"
+					},
+					"response": [
+						{
+							"name": "Post Client",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"gggg1\",\r\n    \"last_name\": \"gggg1\",\r\n    \"category_id\": \"1\",\r\n    \"series_pass\": \"4411\",\r\n    \"number_pass\": \"441112\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/clients/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"clients",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:05:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6Ikk4QkJaOWowbDBrWHNUNnVpMUQ5ZkE9PSIsInZhbHVlIjoiemJDUE15bGJYejRJNytFUENaWHMyWDM5cW55NzFzOUhtZjI4RW01WWRSdldOeGdZWE5qTStCOTVzeHMrZ3J4L2ZRM3lHNnNwVWdJTzk4VnkxN01oM0p0WVNXRUhMQjJMdjdxYlVXYVVPSExmTFFoRTBYeDBSU0tJemdEUDhBZGIiLCJtYWMiOiJiMTk1YmI0YWVhMzJhNTBjNzYxMTMwODgwYmI2NGM3NzdmMWRjNmUyNTViNWQ1OTYyNDliOWE3N2MxZDhmNjQ5IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:59 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InVkRStIYWo1bmJESFkyTGJ5TzByRlE9PSIsInZhbHVlIjoiL3hXL2JMc1h3VzFWR1lBeGQyNi92KzY0Q2NvRFNOMkNPVy9teE9IVzFxanFtKy9tWndubjNWSyt2UU1HbEJBVGpDWFp2SFN3MVN5MUdnVmdBMm5LSXBIeEFZM1haTTJxYzV6L2d6Nm45N05Pc2J1SmJOaVZxbTFreVA2aXRrZGgiLCJtYWMiOiI3ODNhMzlkNGZmNWQzNzJhYjQxYTYyOTFiOWVjNDY2MTM2YzdlN2VkYjMxNDc2MzI3YTVkYTcyOWEzNDkzNTE3IiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:05:59 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"gggg1\",\n    \"last_name\": \"gggg1\",\n    \"category_id\": \"1\",\n    \"series_pass\": \"4411\",\n    \"number_pass\": \"441112\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Взаимодействие с пользователями системы."
+		},
+		{
+			"name": "Estate",
+			"item": [
+				{
+					"name": "Get Estates (is_sell 1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/estates",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"estates"
+							]
+						},
+						"description": "Получение списка объектов недвижимости, находящихся **в продаже**"
+					},
+					"response": [
+						{
+							"name": "Get Estates (is_sell 1)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/estates",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"estates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jan 2024 12:06:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IjNHKzBLY2dwWkpTbW04cWozUjBqY1E9PSIsInZhbHVlIjoiSUxKUWFScUpYM1lhRVF1Q1RnbVMwVXVZWFpSSUhuRE1jYmRSdUNML2labVJaRnFyMkFvendVaWpPQi9FSVlNSVhJZTNsV1FZL1FtZnJ5QWlTSVhFaWlTUFhUN2M3OFhaaktqd0VVWHhBV1hMZnhqL2VaTHZQZVlraUdTS3dJT3YiLCJtYWMiOiJjMjQxOWJiOTg3MjY2NWRjYTBmYTQ5Y2NiMjRiZjEyNTczOTNiYmIzNjA5Njg5M2EzNGQ4YTcxODQyZjFjMGJkIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:06:04 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlZOcTFGRXp3UW1telhCaHVTTExzSkE9PSIsInZhbHVlIjoiakM1d1c2YVpUTi9uS3FPVTZieVJnOVprRmp2aC9wRE9wTGlTODU1b1RUUmRpSU5LMFJRclV6b1JRUGdsN2x4WS9QQUZXbjRnbXJDTnZYZnNMa3VMVFdzT0hna0ZCVFpLS0FBazdsdzRKTjFXUnZjd1R6RHB1eXJURUZRVnJEL0ciLCJtYWMiOiIwOWU2MjYwNWMwMTdlMWE5ODU3YWViZjdjY2Y5Mzg1ZTFlNTcwMzYyNThjNDRlYzhmZjlhYjZmY2Y1N2RlNGFjIiwidGFnIjoiIn0%3D; expires=Mon, 08 Jan 2024 14:06:04 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 20,\n        \"description\": \"Nihil iste officia nostrum et.\",\n        \"address\": \"441 Dooley Mountains\\nRobertsbury, ME 11077-7281\",\n        \"area\": \"20.60\",\n        \"count_room\": 1,\n        \"is_sell\": 1,\n        \"price\": \"144266.24\",\n        \"type_id\": 2,\n        \"type\": {\n            \"id\": 2,\n            \"title\": \"Земля\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 19,\n        \"description\": \"Fuga id odit quam ut.\",\n        \"address\": \"71182 Georgiana Skyway\\nWittingfurt, AZ 29427-7674\",\n        \"area\": \"86.70\",\n        \"count_room\": 9,\n        \"is_sell\": 1,\n        \"price\": \"102946.81\",\n        \"type_id\": 1,\n        \"type\": {\n            \"id\": 1,\n            \"title\": \"Дом\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 18,\n        \"description\": \"Sit velit rerum qui laboriosam.\",\n        \"address\": \"290 Huels Alley\\nBeckershire, VA 74269-1912\",\n        \"area\": \"44.50\",\n        \"count_room\": 8,\n        \"is_sell\": 1,\n        \"price\": \"111344.64\",\n        \"type_id\": 2,\n        \"type\": {\n            \"id\": 2,\n            \"title\": \"Земля\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 15,\n        \"description\": \"Rerum autem iusto voluptatem eum ex.\",\n        \"address\": \"60425 Foster Mall Apt. 621\\nHuelsland, NH 76472\",\n        \"area\": \"44.60\",\n        \"count_room\": 5,\n        \"is_sell\": 1,\n        \"price\": \"241375.13\",\n        \"type_id\": 1,\n        \"type\": {\n            \"id\": 1,\n            \"title\": \"Дом\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 13,\n        \"description\": \"Non enim numquam quo aut incidunt.\",\n        \"address\": \"31447 Delta Squares\\nSouth Lowell, ND 51272\",\n        \"area\": \"26.50\",\n        \"count_room\": 1,\n        \"is_sell\": 1,\n        \"price\": \"877707.14\",\n        \"type_id\": 1,\n        \"type\": {\n            \"id\": 1,\n            \"title\": \"Дом\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 12,\n        \"description\": \"Est omnis dignissimos nostrum mollitia qui dolorum ab commodi.\",\n        \"address\": \"1743 Hessel Mission\\nPort Bartholomestad, AR 22490-7665\",\n        \"area\": \"72.30\",\n        \"count_room\": 2,\n        \"is_sell\": 1,\n        \"price\": \"825615.55\",\n        \"type_id\": 1,\n        \"type\": {\n            \"id\": 1,\n            \"title\": \"Дом\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 11,\n        \"description\": \"Voluptatem eos ut harum.\",\n        \"address\": \"817 Jorge Course Suite 907\\nMcDermottchester, WY 95680-1925\",\n        \"area\": \"14.60\",\n        \"count_room\": 3,\n        \"is_sell\": 1,\n        \"price\": \"464479.78\",\n        \"type_id\": 2,\n        \"type\": {\n            \"id\": 2,\n            \"title\": \"Земля\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 10,\n        \"description\": \"Sequi natus pariatur at ut necessitatibus distinctio omnis ut.\",\n        \"address\": \"209 Lynch Hill Suite 062\\nHowellstad, FL 65837\",\n        \"area\": \"88.50\",\n        \"count_room\": 1,\n        \"is_sell\": 1,\n        \"price\": \"133690.27\",\n        \"type_id\": 2,\n        \"type\": {\n            \"id\": 2,\n            \"title\": \"Земля\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 9,\n        \"description\": \"Quibusdam quia accusamus deleniti sequi beatae.\",\n        \"address\": \"780 Hoeger Plains\\nNorth Rubie, MT 84718\",\n        \"area\": \"14.80\",\n        \"count_room\": 9,\n        \"is_sell\": 1,\n        \"price\": \"249799.35\",\n        \"type_id\": 2,\n        \"type\": {\n            \"id\": 2,\n            \"title\": \"Земля\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 7,\n        \"description\": \"Labore eum animi quaerat vel odit quia.\",\n        \"address\": \"807 West Terrace Apt. 027\\nConnertown, DE 45246\",\n        \"area\": \"77.40\",\n        \"count_room\": 3,\n        \"is_sell\": 1,\n        \"price\": \"788271.42\",\n        \"type_id\": 1,\n        \"type\": {\n            \"id\": 1,\n            \"title\": \"Дом\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 6,\n        \"description\": \"Aliquid nisi inventore dolore saepe velit esse eligendi similique.\",\n        \"address\": \"593 Gerda Streets Suite 345\\nLake Joanniestad, ND 08062\",\n        \"area\": \"44.10\",\n        \"count_room\": 2,\n        \"is_sell\": 1,\n        \"price\": \"734173.54\",\n        \"type_id\": 2,\n        \"type\": {\n            \"id\": 2,\n            \"title\": \"Земля\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"description\": \"Aperiam provident voluptas quia tempora et omnis.\",\n        \"address\": \"799 Beth Burg\\nGrantshire, NH 75592\",\n        \"area\": \"55.00\",\n        \"count_room\": 9,\n        \"is_sell\": 1,\n        \"price\": \"202154.04\",\n        \"type_id\": 2,\n        \"type\": {\n            \"id\": 2,\n            \"title\": \"Земля\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"description\": \"Exercitationem ducimus tempora repellendus recusandae.\",\n        \"address\": \"892 Jordon Viaduct Apt. 876\\nWallacefurt, NV 40616\",\n        \"area\": \"17.30\",\n        \"count_room\": 8,\n        \"is_sell\": 1,\n        \"price\": \"367344.97\",\n        \"type_id\": 1,\n        \"type\": {\n            \"id\": 1,\n            \"title\": \"Дом\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"description\": \"Quo nostrum provident placeat ut explicabo sunt.\",\n        \"address\": \"4984 Barrows Bypass\\nSchroederberg, LA 26423-3995\",\n        \"area\": \"64.80\",\n        \"count_room\": 4,\n        \"is_sell\": 1,\n        \"price\": \"499078.75\",\n        \"type_id\": 1,\n        \"type\": {\n            \"id\": 1,\n            \"title\": \"Дом\",\n            \"created_at\": \"2024-01-08T10:38:19.000000Z\",\n            \"updated_at\": \"2024-01-08T10:38:19.000000Z\"\n        }\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "Взаимодействие с объектами недвижимости."
+		}
+	]
+}

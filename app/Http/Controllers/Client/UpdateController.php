@@ -13,7 +13,7 @@ class UpdateController extends BaseController
 {
     public function update(UpdateRequest $request, Client $client) {
         $data = $request->validated();
-        $client->update($data);
+        $this->service->update($client, $data);
         return redirect()->route("client.show", $client->id);
     }
 }

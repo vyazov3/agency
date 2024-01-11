@@ -30,23 +30,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['namespace' => 'App\Http\Controllers\Client'], function () {
-    Route::get('api/v1/clients', [IndexController::class, 'index'])->name('client.index');
-    Route::get('api/v1/clients/create', [CreateController::class, 'create'])->name('client.create');
-    Route::post('api/v1/clients/store', [StoreController::class, 'store'])->name('client.store');
-    Route::get('api/v1/clients/{client}/edit', [EditController::class, 'edit'])->name('client.edit')->where('client', '[0-9]+');
-    Route::get('api/v1/clients/{client}', [ShowController::class, 'show'])->name('client.show')->where('client', '[0-9]+');
-    Route::get('api/v1/clients/{client}/trades', [ClientTradeController::class, 'trade'])->name('client.trade')->where('client', '[0-9]+');
-    Route::patch('api/v1/clients/{client}', [UpdateController::class, 'update'])->name('client.update')->where('client', '[0-9]+');
-    Route::delete('api/v1/clients/{client}', [DestroyController::class, 'destroy'])->name('client.delete')->where('client', '[0-9]+');
-});
-Route::group(['namespace' => 'App\Http\Controllers\Estate'], function () {
-    Route::get('api/v1/estates', [EIndexController::class, 'index'])->name('estate.index');
-    Route::get('api/v1/estates/{estate}/trades', [ETradeController::class, 'trade'])->name('estate.trade')->where('estate', '[0-9]+');
-});
-Route::group(['namespace' => 'App\Http\Controllers\Trade'], function () {
-    Route::get('api/v1/trades', [TIndexController::class, 'index'])->name('trade.index');
-    Route::get('api/v1/trades/{trade}/clients/estates', [TCEController::class, 'show'])->name('trade.client.object')->where('trade', '[0-9]+');
-    Route::post('api/v1/trades/store', [TStoreController::class, 'store'])->name('trade.store');
-    Route::post('api/v1/trades/clients-estates/store', [SCTController::class, 'store'])->name('trade.client.object.store');
+Route::prefix('api/v1')->group(function () {
+    Route::group(['namespace' => 'App\Http\Controllers\Client'], function () {
+        Route::get('/clients', [IndexController::class, 'index'])->name('client.index');
+        Route::get('/clients/create', [CreateController::class, 'create'])->name('client.create');
+        Route::post('/clients/store', [StoreController::class, 'store'])->name('client.store');
+        Route::get('/clients/{client}/edit', [EditController::class, 'edit'])->name('client.edit')->where('client', '[0-9]+');
+        Route::get('/clients/{client}', [ShowController::class, 'show'])->name('client.show')->where('client', '[0-9]+');
+        Route::get('/clients/{client}/trades', [ClientTradeController::class, 'trade'])->name('client.trade')->where('client', '[0-9]+');
+        Route::patch('/clients/{client}', [UpdateController::class, 'update'])->name('client.update')->where('client', '[0-9]+');
+        Route::delete('/clients/{client}', [DestroyController::class, 'destroy'])->name('client.delete')->where('client', '[0-9]+');
+    });
+    Route::group(['namespace' => 'App\Http\Controllers\Estate'], function () {
+        Route::get('/estates', [EIndexController::class, 'index'])->name('estate.index');
+        Route::get('/estates/{estate}/trades', [ETradeController::class, 'trade'])->name('estate.trade')->where('estate', '[0-9]+');
+    });
+    Route::group(['namespace' => 'App\Http\Controllers\Trade'], function () {
+        Route::get('/trades', [TIndexController::class, 'index'])->name('trade.index');
+        Route::get('/trades/{trade}/clients/estates', [TCEController::class, 'show'])->name('trade.client.object')->where('trade', '[0-9]+');
+        Route::post('/trades/store', [TStoreController::class, 'store'])->name('trade.store');
+        Route::post('/trades/clients-estates/store', [SCTController::class, 'store'])->name('trade.client.object.store');
+    });
 });
